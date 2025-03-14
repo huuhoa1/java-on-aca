@@ -1,0 +1,9 @@
+
+
+UNIQUEID=$(openssl rand -hex 3)
+APPNAME=petclinic
+RESOURCE_GROUP=rg-$APPNAME-$UNIQUEID
+LOCATION=westus
+az group create -g $RESOURCE_GROUP -l $LOCATION
+
+az configure --default group=$RESOURCE_GROUP
